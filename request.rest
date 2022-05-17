@@ -1,0 +1,54 @@
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Astrodev2",
+    "email": "astrodev2@gmail.com",
+    "password": "123456",
+    "role": "admin"
+}
+
+###
+
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "astrodev2@gmail.com",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:3003/bands/register
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4MjYxMjY3LTA0NWQtNDIxYy1hMDRmLWVlMTZhYmNkNGQyOCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MjQ2NTEwNSwiZXhwIjoxNjUyNDgzMTA1fQ.HEhffKpY4_YXUFqUfKc6doaICQT7N5H3CvbEdVHjsR4
+Content-Type: application/json
+
+{
+    "name": "Fall Out Boy",
+    "musicGenre": "Rock Alternativo",
+    "responsible": "Patrick Stump"
+}
+
+###
+
+GET http://localhost:3003/bands/get?search=338caaff
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4MjYxMjY3LTA0NWQtNDIxYy1hMDRmLWVlMTZhYmNkNGQyOCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MjQ2NTEwNSwiZXhwIjoxNjUyNDgzMTA1fQ.HEhffKpY4_YXUFqUfKc6doaICQT7N5H3CvbEdVHjsR4
+
+###
+
+POST http://localhost:3003/shows/add
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRjYTRiNmUwLWI0ZjEtNDI4Mi05OWU0LWVmN2MxMzkxOWNlNCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MjU0OTQyMywiZXhwIjoxNjUyNTY3NDIzfQ.21TgUd4yR3yI1kdB-0jAlVg2dNzYO2INiR0LvEscoxk
+Content-Type: application/json
+
+{
+    "bandId": "338caaff-fc7d-4897-908f-bbc678f5a583",
+    "weekDay": "sabado",
+    "startTime": 9,
+    "endTime": 12
+}
+
+###
+GET http://localhost:3003/shows/getAllShows/sabado
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRjYTRiNmUwLWI0ZjEtNDI4Mi05OWU0LWVmN2MxMzkxOWNlNCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MjU0OTQyMywiZXhwIjoxNjUyNTY3NDIzfQ.21TgUd4yR3yI1kdB-0jAlVg2dNzYO2INiR0LvEscoxk
+
